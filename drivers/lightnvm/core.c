@@ -289,7 +289,7 @@ static int nvm_create_tgt(struct nvm_dev *dev, struct nvm_ioctl_create *create)
 	set_capacity(tdisk, tt->capacity(targetdata));
 	add_disk(tdisk);
 
-	if (tt->sysfs_init(tdisk))
+	if (tt->sysfs_init && tt->sysfs_init(tdisk))
 		goto err_sysfs;
 
 	t->type = tt;

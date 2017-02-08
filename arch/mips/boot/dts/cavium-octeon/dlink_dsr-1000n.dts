@@ -38,6 +38,16 @@
 			gpios = <&gpio 11 GPIO_ACTIVE_LOW>;
 		};
 
+		pog {
+			label = "powerGreen";
+			gpios = <&gpio 14 GPIO_ACTIVE_LOW>;
+		};
+
+	    	poo {
+			label = "powerOrange";
+			gpios = <&gpio 15 GPIO_ACTIVE_LOW>;
+		};
+		
 		wireless1 {
 			label = "5g";
 			gpios = <&gpio 17 GPIO_ACTIVE_LOW>;
